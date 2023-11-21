@@ -9,7 +9,7 @@
 }
 :root {
     /* --clr1:#fc8662;  */
-    --clr1:#f34c4c; 
+    --clr1:#f34c4c;
     --clr2:#ffffff;
 }
 body {
@@ -30,7 +30,7 @@ body {
     flex-direction: column;
     justify-content: start;
     align-items: center;
-    padding: 4rem;
+    padding-top: 3rem;/*aqui*/
     transition: 2s;
     position: relative;
     z-index: 9999999999999;
@@ -38,21 +38,21 @@ body {
 .year {
     display: flex;
     gap:0.5rem;
-    margin: 1rem 0 0 0 ;
+    margin: 1rem 0 0 0 ;/*aqui*/
 }
 @keyframes delay {
     0% {
         height: 0;
     }
     50% {
-        height:calc(100% + 15px) ;
+        height:calc(100% + 10px) ;/*aqui*/
     }
     100% {
         height: 0%;
     }
 }
 .year span {
-    width: 30px;
+    width: 20px;/*aqui*/
     height: 30px;
     cursor: pointer;
     display: flex;
@@ -64,16 +64,16 @@ body {
 .year span::before {
     content: attr(data-text);
     position: absolute;
-    top: -15px;
+    top: -10px;/*aqui*/
     left: 0px;
     width: 100%;
     height: 0;
-    font-size: 3em;
+    font-size: 2rem;/*aqui*/
     font-weight: 700;
     font-family: 'Josefin Sans', sans-serif;
     color: white;
     text-align: center;
-    line-height: 60px;
+    line-height: 50px;/*aqui*/
     color: var(--clr);
     border-bottom: 6px solid var(--clr);
     overflow: hidden;
@@ -86,7 +86,7 @@ body {
     animation-iteration-count: infinite;
 }
 .year span b {
-    font-size: 3em;
+    font-size: 2rem;/*aqui*/
     font-weight: 700;
     -webkit-text-stroke: 2px var(--clr);
     color: transparent;
@@ -176,8 +176,7 @@ label .alegre::after {
     position: absolute;
     z-index: 99999;
     width: 100vw;
-    
-    top: 250px;
+    top: 120px;/*aqui*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -185,22 +184,22 @@ label .alegre::after {
 }
 .fa-arrow-left{
     position: absolute;
-    font-size: 2rem;
-    bottom: -4rem;
+    font-size: 1.5rem;/*2rem*/
+    bottom: -3.5rem;/*-4rem*/
     left: 1rem;
     padding: 0.5rem;
-    background: #2e2e2e;
+    background: rgba(34, 34, 34, 0.774);;
     color: var(--clr1);
     border-radius: 0.2rem;
     cursor: pointer;
 }
 .fa-arrow-right{
     position: absolute;
-    font-size: 2rem;
-    bottom: -4rem;
+    font-size: 1.5rem;/*2rem*/
+    bottom: -3.5rem;/*-4rem*/
     right: 1rem;
     padding: 0.5rem;
-    background: #2e2e2e;
+    background: rgba(34, 34, 34, 0.774);;
     color: var(--clr1);
     border-radius: 0.2rem;
     cursor: pointer;
@@ -221,7 +220,7 @@ label .alegre::after {
     flex-direction: row;
     scroll-behavior: smooth;
     overflow: hidden;
-    
+
 }
 .caja_protectora {
     min-width: 100vw;
@@ -262,7 +261,7 @@ label .alegre::after {
     inset: 40px -10px;
 }
 .box_container .box {
-    width: 18rem;
+    width: 15rem;/*18rem*/
     height: min-content;
     /* margin: 1rem 0 0 1rem 0; */
     background: #2e2e2e;
@@ -283,28 +282,16 @@ label .alegre::after {
     height: 100%;
     overflow: hidden;
 }
-.box_container .box .box_content .box-icon {
-    color: var(--clr1);
-    width: 80px;
-    height: 80px;
-    box-shadow: 0 0 0 4px #2e2e2e, 0 0 0 6px var(--clr1);
+.box-text {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
-    font-size: 2.5em;
-    background: #2e2e2e;
-    transition: 0.5s ease-in-out;
-    margin-bottom: 1rem;
-
-}
-.box_container .box:hover .box_content .box-icon {
-    box-shadow: 0 0 0 4px #2e2e2e, 0 0 0 500px var(--clr1);
-    background: var(--clr1);
-    color: #2e2e2e;
+    gap: 1rem;
 }
 .box_container .box .box_content .box-text h3{
     color: #fff;
-    font-size: 1.5em;
+    font-size: 1.1rem;/*aqui*/
     font-weight: 500;
     transition: 0.5s ease-in-out;
 }
@@ -314,6 +301,7 @@ label .alegre::after {
 .box_container .box .box_content .box-text p{
     color: #999;
     transition: 0.5s ease-in-out;
+    font-size: 0.85rem;/*aqui*/
 }
 .box_container .box:hover .box_content .box-text p{
     color: #2e2e2e;
@@ -325,7 +313,7 @@ label .alegre::after {
     display: inline-block;
     text-decoration: none;
     font-weight: 500;
-    margin-top: 10px;
+    margin-top: 5px;/*10px*/
     letter-spacing: 1px;
     transition: 0.5s ease-in-out;
     cursor: pointer;
@@ -334,12 +322,24 @@ label .alegre::after {
     background: #2e2e2e;
     color: var(--clr1);
 }
-.box-text {
+.box_container .box .box_content .box-icon {
+    color: var(--clr1);
+    width: 50px;/*aqui*/
+    height: 50px;/*aqui*/
+    box-shadow: 0 0 0 4px #2e2e2e, 0 0 0 6px var(--clr1);
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    gap: 1.5rem;
+    font-size: 2em;/*aqui*/
+    background: #2e2e2e;
+    transition: 0.5s ease-in-out;
+    margin-bottom: 0.5rem;/*aqui*/
+
+}
+.box_container .box:hover .box_content .box-icon {
+    box-shadow: 0 0 0 4px #2e2e2e, 0 0 0 500px var(--clr1);
+    background: var(--clr1);
+    color: #2e2e2e;
 }
 .box_container .box .box_content .box-icon ion-icon{
     animation-name: Pulsation;
@@ -396,7 +396,7 @@ label .alegre::after {
     display: grid;
     grid-template-columns: 100%;
     grid-template-rows: min-content min-content 1fr min-content;
-    grid-template-areas: 
+    grid-template-areas:
     /* "blog1img blog1tittle"
     "blog1img blog1subtittle"
     "blog1img blog1paragraph"
@@ -406,13 +406,13 @@ label .alegre::after {
     "blog1paragraph"
     "blog1button";
     max-height: 100%;
-    
+
 }
 .blog-box_img {
     /* grid-area: blog1img; */
     margin-right: 4rem;
     /* display: flex; */
-    display: none; 
+    display: none;
 
     align-items: center;
     justify-content: flex-end;
@@ -423,7 +423,7 @@ label .alegre::after {
 .blog-tittle {
     grid-area: blog1tittle;
     color:#fff;
-    font-size: 4.6875rem;
+    font-size: 3.5rem;/*4.6875rem*/
     margin-bottom: 1.5rem;
     /* margin-top: 1rem; */
 }
@@ -434,8 +434,8 @@ label .alegre::after {
     grid-area: blog1subtittle;
     color: white;
     letter-spacing: 2px;
-    font-size: 1.375rem;
-    margin-bottom: 2rem;
+    font-size: 1.1rem;/*1.375rem;*/
+    margin-bottom: 1rem;/*2rem*/
 
 }
 .blog-subtittle span {
@@ -446,16 +446,16 @@ label .alegre::after {
     color: #999;
     letter-spacing: 1px;
     line-height: 28px;
-    font-size: 1rem;
+    font-size: 0.85rem;/*1rem*/
     width:100% ;
     padding: 0 1rem 0 1rem;
     overflow: scroll;
-    
+
 }
 .blog-box_button {
     grid-area: blog1button;
     display: flex;
-    justify-content: end;
+    justify-content: space-around;
     align-items: center;
     /* padding-bottom: 2rem; */
     max-width: 80rem;
@@ -467,12 +467,12 @@ label .alegre::after {
     height: min-content;
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 0.8rem;/*1rem*/
     cursor: pointer;
 }
 .blog-box_button label div {
-    width: 2rem;
-    height: 2rem;
+    width: 1.5rem;/*2rem*/
+    height: 1.5rem;/*2rem*/
     border: 2px solid var(--clr1);
     display: flex;
     align-items: center;
@@ -487,9 +487,6 @@ label .alegre::after {
 .blog-box_button label input {
     display: none;
 }
-g-box_button label input {
-    display: none;
-}
 .blog-box_button label input:checked ~ div {
     background: var(--clr1);
     transition: 0.5s;
@@ -497,11 +494,16 @@ g-box_button label input {
 .blog-box_button label input:checked ~ div ion-icon {
     opacity: 1;
 }
+.blog-box_button label span {
+    font-size: 0.9rem;/*1.1rem*/
+    margin-top: 0.2rem;
+    line-height: 1rem;
+}
 .blog-button {
     background: var(--clr1);
     border-radius: 2rem;
-    padding: 1.1rem 2rem 1.1rem 2rem;
-    font-size: 1.1rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;/*1.1rem 2rem 1.1rem 2rem;*/
+    font-size: 0.9rem;/*1.1rem*/
     color: rgb(255, 255, 255);
     cursor: pointer;
     transition: 0.5s all;
@@ -524,10 +526,10 @@ g-box_button label input {
     gap: 1rem;
     position: absolute;
     z-index: 99999999999;
-    top: 0;
+    top: 0rem;
     right: 0;
     background-color: #2e2e2e75;
-    padding: 15px;
+    padding: 5px;/*15px*/
     transition: 3s;
 
 }
@@ -538,7 +540,6 @@ g-box_button label input {
     padding: 8px;
     background-color: rgba(34, 34, 34, 0.774);
     border-radius: 50%;
-    /* border: 2px solid #f35b2c; */
     color:var(--clr1);
     position: relative;
     transition: order 3s;
@@ -552,103 +553,20 @@ g-box_button label input {
 .box_music:hover {
     color: #222;
     background: var(--clr1);
-    
+
 
 }
 .box_music:active {
     background: var(--clr1);
 }
 .music {
-    font-size: 1.5rem;
+    font-size: 1.1rem;/*1.5rem*/
     filter:blur(200%);
     cursor: pointer;
-    /* filter: contrast(2) drop-shadow(0 0 2px var(--clr1)); */
 }
 #iconPlay {
     transform: translateX(2px);
 }
-/* #buttonPlay::before {
-    content: "";
-    position: absolute;
-    height: 50px;
-    width: 2px;
-    background: #f35b2c;
-    top:-5px;
-    left: 4px;
-    box-shadow: 30px 0px 0px 0px #f35b2c;
-    transition: 0.5s all;
-}
-#buttonPlay::after {
-    content: "";
-    position: absolute;
-    height: 2px;
-    width: 50px;
-    background: #f35b2c;
-    left:-5px;
-    top: 4px;
-    box-shadow: 0px 30px 0px 0px #f35b2c;
-    transition: 0.5s all;
-
-}
-#buttonPlay:hover::before {
-    background: #f35b2c;
-    transform: rotate(45deg) translateY(-10px) translateX(-4px);
-}
-#buttonPlay:hover::after {
-    background: #f35b2c;
-    transform: rotate(45deg) translateY(-4px) translateX(10px);
-}
-#buttonPlay:active::before {
-    background: #fc8662;
-    transform: rotate(45deg) translateY(-10px) translateX(-4px);
-    box-shadow: 30px 0px 0px 0px #fc8662;
-}
-#buttonPlay:active::after {
-    background: #fc8662;
-    transform: rotate(45deg) translateY(-4px) translateX(10px);
-    box-shadow: 0px 30px 0px 0px #fc8662;
-}
-#buttonVolumen::before {
-    content: "";
-    position: absolute;
-    height: 50px;
-    width: 2px;
-    background: #f35b2c;
-    top:-5px;
-    left: 4px;
-    box-shadow: 30px 0px 0px 0px #f35b2c;
-    transition: 0.5s all;
-}
-#buttonVolumen::after {
-    content: "";
-    position: absolute;
-    height: 2px;
-    width: 50px;
-    background: #f35b2c;
-    left:-5px;
-    top: 4px;
-    box-shadow: 0px 30px 0px 0px #f35b2c;
-    transition: 0.5s all;
-
-}
-#buttonVolumen:hover::before {
-    background: #f35b2c;
-    transform: rotate(45deg) translateY(-10px) translateX(-4px);
-}
-#buttonVolumen:hover::after {
-    background: #f35b2c;
-    transform: rotate(45deg) translateY(-4px) translateX(10px);
-}
-#buttonVolumen:active::before {
-    background: #fc8662;
-    transform: rotate(45deg) translateY(-10px) translateX(-4px);
-    box-shadow: 30px 0px 0px 0px #fc8662;
-}
-#buttonVolumen:active::after {
-    background: #fc8662;
-    transform: rotate(45deg) translateY(-4px) translateX(10px);
-    box-shadow: 0px 30px 0px 0px #fc8662;
-} */
 /* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 .header_box {
     display: flex;
@@ -659,10 +577,9 @@ g-box_button label input {
 .section_presentacion {
     background-color: #222;
     display: flex;
-    /* width: min-content; */
-    min-width: 320px;
+    min-width: 300px;
     height: min-content;
-    margin-top: 8rem;
+    margin-top: 4.5rem;/*aqui*/
     overflow: hidden;
     position: relative;
     padding: 4px;
@@ -700,7 +617,7 @@ g-box_button label input {
         "fr1 fr2"
         "fr3 fr3"
         "fr4 fr4";
-    padding: 2rem 1rem 2rem 1rem;
+    padding: 1rem 0.5rem 1rem 0.5rem;/*2rem 1rem 2rem 1ren;*/
 }
 .presentacion-box_img {
     grid-area: fr1;
@@ -710,14 +627,14 @@ g-box_button label input {
 
 }
 .presentacion-img {
-    width: 5rem;
+    width: 4rem; /* 5rem*/
     -webkit-box-reflect:  below 0px linear-gradient(transparent, rgba(0, 0, 0, 0.438));
     filter: drop-shadow(0 0 15px rgb(255, 208, 0)) ;
 }
 .pesentacion-saludo {
     color: var(--clr1);
     grid-area: fr2;
-    font-size: 3rem;
+    font-size: 2rem; /* 3rem*/
     padding-top: 1rem;
     letter-spacing: 1px;
     width: max-content;
@@ -726,15 +643,13 @@ g-box_button label input {
 .presentacion-contenido {
     color: #999;
     grid-area: fr3;
-    font-size: 1rem;
+    font-size: 0.85rem; /* 1rem*/
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.712);
     text-align: center;
-    padding-top: 1.5rem;
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-    padding-bottom: 1.5rem;
+    padding: 1rem; /*1.5rem;*/
     line-height: 1.2rem;
     letter-spacing: 1px;
+    width: 280px;
 }
 .presentacion-box_button {
     grid-area: fr4;
@@ -742,13 +657,13 @@ g-box_button label input {
     justify-content: center;
     align-items: center;
     flex-direction: row-reverse;
-    margin-top: 2rem;
+    margin: 1rem 0 0.5rem 0;/*2rem 1rem;*/
 
 }
 .presentacion-button {
     position: relative;
     display: inline-block;
-    padding: 15px 30px;
+    padding: 10px 25px;/*15px 30px;*/
     border: 2px solid var(--clr1);
     font-weight: 600;
     cursor: pointer;
@@ -757,9 +672,7 @@ g-box_button label input {
     -webkit-box-reflect: below 0px linear-gradient(transparent, #0002);
     background: transparent;
     transition: 0.75s;
-    /* transition-delay: 0s; */
-    margin: 0 0rem 1rem 0;
-    font-size: 0.7rem;
+    font-size: 0.6rem;/*0.7rem*/
 }
 .presentacion-button::before {
     content: "";
@@ -772,9 +685,9 @@ g-box_button label input {
     background: var(--clr1);
     filter: drop-shadow(0 0 0);
     box-shadow: 5px -8px 0 var(--clr1),
-                5px 8px 0 var(--clr1);           
+                5px 8px 0 var(--clr1);
     transition: width 0.25s ,  left 0.25s , height 0.25s , box-shadow 0.25s, filter 0.25s;
-    transition-delay: 0.5s,0.25s,0s,0s,0s; 
+    transition-delay: 0.5s,0.25s,0s,0s,0s;
 }
 .presentacion-button::after {
     content: "";
@@ -787,9 +700,9 @@ g-box_button label input {
     background: var(--clr1);
     box-shadow: -5px -8px 0 var(--clr1),
                 -5px 8px 0 var(--clr1);
-    filter: drop-shadow(0 0 0);          
+    filter: drop-shadow(0 0 0);
     transition: width 0.25s ,  right 0.25s , height 0.25s , box-shadow 0.25s, filter 0.25s;
-    transition-delay: 0.5s,0.25s,0s,0s,0s; 
+    transition-delay: 0.5s,0.25s,0s,0s,0s;
 }
 .presentacion-button span {
     position: relative;
@@ -800,17 +713,19 @@ g-box_button label input {
     position: absolute;
     z-index: 99994;
     top: 0;
-    padding: 2rem 2rem 2rem 2rem;
+    padding: 1.5rem 2rem 1.5rem 2rem;
     background: #2e2e2e;
     /* backdrop-filter: blur(40px); */
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-}   
+    width: 100%;
+}
 .section_tittle h2 {
     color: white;
-    font-size: 4rem;
+    font-size: 2.2rem;/*aqui*/
     letter-spacing: 2px;
 }
 .section_tittle h2 span {
@@ -819,16 +734,17 @@ g-box_button label input {
 }
 .section_tittle h4 {
     color: white;
-    font-size: 1.7rem;
+    font-size: 1rem;
     letter-spacing: 2px;
     position: relative;
+
 }
 .section_tittle h4::before {
     content: "<";
     position: absolute;
     top: 0;
-    left: 0rem;
-    transform: translateY(-10%); 
+    left: -0.8rem;
+    transform: translateY(-10%);
     color: var(--clr1);
     filter: drop-shadow(0 0 5px  var(--clr1)) drop-shadow(0 0 10px  var(--clr1));
 }
@@ -836,7 +752,7 @@ g-box_button label input {
     content: ">";
     position: absolute;
     top: 0;
-    right: 0em;
+    right: -0.8rem;
     transform: translateY(-10%);
 }
 .section_tittle h4 span {
@@ -854,7 +770,7 @@ g-box_button label input {
     bottom: 0;
     width: 100%;
     backdrop-filter: blur(10px);
-    padding: 1rem 0 2rem 0;
+    padding: 1rem 0 1.5rem 0; /*1rem 0 2rem 0;*/
     opacity: 0;
     pointer-events: none;
 
@@ -862,7 +778,7 @@ g-box_button label input {
 .section_button-declaration {
     position: relative;
     display: inline-block;
-    padding: 15px 30px;
+    padding: 10px 25px;/*15px 30px*/
     border: 2px solid var(--clr1);
     font-weight: 600;
     cursor: pointer;
@@ -875,6 +791,7 @@ g-box_button label input {
     /* margin: 3rem ; */
     background: #222;
     opacity: 0;
+    font-size: 0.6rem;
 
 }
 .section_button-declaration::before {
@@ -927,30 +844,32 @@ g-box_button label input {
 }
 .section_box-container_declaration {
     display: grid;
-    /* grid-template-columns: 30% auto 31%;
-    grid-template-rows: auto 30rem auto; */
     grid-template-columns: 100%;
-    grid-template-rows: auto 1fr auto;
-    grid-template-areas: 
-    /* "dFimg1 dFpr dFask "
-    "dFimg1 dFani dFask "
-    "dFimg1 dFbcn dFask ";  */
-    "dFpr"
+    grid-template-rows: min-content 1fr auto auto auto ;
+    grid-template-areas:
+    "dFpr-t"
+    "dFpr-tb"
+    "dFpr-p"
     "dFani"
-    "dFbcn"; 
-
-    /* display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; */
+    "dFbcn";
     background: rgb(31, 31, 31);
     width: 100%;
     height: 100%;
     padding: 2rem 1rem 2rem 1rem;
     justify-content: center;
-    gap: 2rem;
-  
+    
+
 }
+.section_box-container_declaration  h3 {
+    grid-area: dFpr-t;
+}
+.section_box-container_declaration h2 {
+    grid-area: dFpr-tb;
+}
+.section_box-container_declaration p {
+    grid-area: dFpr-p;
+}
+
 .container_box_declaration-icon {
     grid-area: dFani;
     display: flex;
@@ -958,6 +877,7 @@ g-box_button label input {
     align-items: center;
     flex-direction: column;
     /* margin-bottom: 6rem; */
+    min-height: 190px;
 }
 .box_declaration-icon {
     display: flex;
@@ -968,9 +888,9 @@ g-box_button label input {
 }
 .declaration-icon {
     position: relative;
-    width: 200px;
-    height: 200px;
-    background: transparent; 
+    width: 100px;/*200px*/
+    height: 100px;/*200px*/
+    background: transparent;
     animation-name: animateRotateD;
     animation-duration: 24s;
     animation-iteration-count: infinite;
@@ -986,19 +906,19 @@ g-box_button label input {
 }
 .box_declaration-icon h3 {
     position: absolute;
-    top:calc(50% + 1rem);
+    top:calc(50% + 0rem);/*calc(50% + 1rem);*/
     left:  50%;
-    transform: translate(-50%,-50%);  
-    font-size: 1.5rem;
+    transform: translate(-50%,-50%);
+    font-size: 1rem;/*1.5rem*/
     font-weight: 300;
-    color: #999;
+    color: #999; 
     text-align: center;
 }
 .box_declaration-icon h3 i {
     color: var(--clr1);
     animation: animateEscaleHeart 1.5s infinite linear ;
-    font-size: 5rem;
-    margin-top: 1rem;
+    font-size: 2rem;/*5rem*/
+    margin-top: 0.2rem;/*1rem*/
 }
 .box_declaration-icon h3 b{
     color: var(--clr1);
@@ -1022,10 +942,10 @@ g-box_button label input {
     position: absolute;
     top: 0;
     left: 0;
-    width: 20px;
-    height: 20px;
+    width: 10px;/*20px;*/
+    height: 10px;/*20px;*/
     background:  #333;
-} 
+}
 .declaration-icon span:nth-child(3n+3):before {
     background: var(--clr1);
     box-shadow:  0 0 10px var(--clr1),
@@ -1037,7 +957,7 @@ g-box_button label input {
     animation-duration:  2s;
     animation-timing-function: linear;
     animation-iteration-count: infinite;
-    transform-origin: 100px;
+    transform-origin: 50px;/*100px*/
 }
 @keyframes animateSquare {
     0%,25% {
@@ -1054,19 +974,15 @@ g-box_button label input {
     display: flex;
     /* text-align: center; */
     /* justify-content: center; */
-    align-items: start; 
+    align-items: start;
     flex-direction: column;
     /* padding-top: 2.2rem; */
 }
-/* .box_paragraph p {
-    width: 50rem;
-    max-width: 750px; 
-} */
 .box_paragraph ion-icon {
     color: var(--clr1);
     animation: animateEscaleHeart 1.5s infinite linear ;
     font-size: 5rem;
-    
+
 }
 @keyframes animateEscaleHeart {
     0% {
@@ -1131,7 +1047,7 @@ g-box_button label input {
     position: absolute;
     background: var(--clr1);
     pointer-events:none;
-}    
+}
 .container_button-declarationFN a span:nth-child(1), .container_button-declarationFN a span:nth-child(3) {
     width: 40px;
     height: 4px;
@@ -1143,7 +1059,7 @@ g-box_button label input {
 .container_button-declarationFN a span:nth-child(1) {
     top: calc(50% - 2px);
     left: -50px;
-    transform-origin: left; 
+    transform-origin: left;
     transition: 0.5s ease-in-out;
     transition-delay: 0.25s;
 }
@@ -1156,7 +1072,7 @@ g-box_button label input {
 .container_button-declarationFN a span:nth-child(3) {
     top: calc(50% - 2px);
     right: -50px;
-    transform-origin: right; 
+    transform-origin: right;
     transition: 0.5s ease-in-out;
     transition-delay: 0.25s;
 }
@@ -1169,7 +1085,7 @@ g-box_button label input {
 .container_button-declarationFN a span:nth-child(2) {
     left: calc(50% - 2px);
     top: -50px;
-    transform-origin: top; 
+    transform-origin: top;
     transition: 0.5s ease-in-out;
     transition-delay: 0.25s;
 }
@@ -1182,7 +1098,7 @@ g-box_button label input {
 .container_button-declarationFN a span:nth-child(4) {
     left: calc(50% - 2px);
     bottom: -50px;
-    transform-origin: bottom; 
+    transform-origin: bottom;
     transition: 0.5s ease-in-out;
     transition-delay: 0.25s;
 }
@@ -1201,7 +1117,7 @@ g-box_button label input {
 .d-box1_img img {
     width: 100%;
     height: 100%;
-} 
+}
 
 .container_box_declaration-ask{
     background: #252525;
@@ -1217,11 +1133,11 @@ g-box_button label input {
     margin-bottom: 0;
 }
 .container_box_declaration-continue{
-
+    grid-area: dFbcn;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 2rem;
+    justify-content: space-around;
+    
 }
 .container_box_declaration-continue label{
     color: var(--clr2);
@@ -1232,8 +1148,8 @@ g-box_button label input {
     cursor: pointer;
 }
 .container_box_declaration-continue label div{
-    width: 2rem;
-    height: 2rem;
+    width: 1.5rem;/*2rem;*/
+    height: 1.5rem;/*2rem;*/
     border: 2px solid var(--clr1);
     display: flex;
     align-items: center;
@@ -1260,10 +1176,15 @@ g-box_button label input {
     opacity: 1;
     color: #222;
 }
+.container_box_declaration-continue label span {
+    font-size: 0.9rem;
+    margin-top: 0.2rem;
+    line-height: 1rem;
+}
 .container_box_declaration-ask-answer {
-    
+
     grid-area: dFask;
-    background: #252525; 
+    background: #252525;
     overflow: hidden;
     background-size: 5%;
     background-repeat: repeat;
@@ -1271,7 +1192,7 @@ g-box_button label input {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: min-content auto min-content;
-    grid-template-areas: 
+    grid-template-areas:
     "Cfask"
     "Cfimg"
     "Cfbut";
@@ -1300,7 +1221,7 @@ g-box_button label input {
 .container_box_declaration-ask-answer figure img:nth-child(1), .container_box_declaration-ask-answer figure img:nth-child(3) {
     -webkit-box-reflect:below 0px linear-gradient(#00000000, #c9c9c993);
     filter: drop-shadow(0px 0px 11px rgb(177, 82, 255)) drop-shadow(0px 0px 100px rgba(177, 82, 255, 0.212));
-} 
+}
 
 /* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 #reparet {
@@ -1317,7 +1238,7 @@ g-box_button label input {
     flex-direction: column;
     padding: 2rem;
     transition: 0.5s all;
-} 
+}
 .svg svg {
     width: 60%;
     transform: translateY(-2rem);
@@ -1338,7 +1259,7 @@ g-box_button label input {
 }
 .svg h3 span {
     position: relative;
-    animation-name: subeybaja; 
+    animation-name: subeybaja;
     animation-duration: 2s;
     animation-delay: calc(var(--time) * 0.1s);
     animation-timing-function: linear;
@@ -1353,4 +1274,6 @@ g-box_button label input {
     font-size: 1rem;
     padding: 2rem;
 }
+
+/* --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 

@@ -352,19 +352,18 @@ buttonPresentacionFinalexe.addEventListener("click", ()=> {
   body.appendChild(presentacionFinalexeET)
   presentacionFinalexeET.outerHTML = `<section class="section_declaration"> 
                                       <div class="section_box-container_declaration">
+
+                                          <h3 class="blog-tittle" id="reparet">CapFinal: <span>Confesión</span></h3>
+                                          <h2 class="blog-subtittle"><span>Sentimientos &</span> Finish</h2>       
+                                          <!-- <ion-icon name="heart"></ion-icon> -->
+                                          <p class="blog-paragraph">"Te quiero desde que te conocí, desde que te metiste dentro de mi corazón, desde que te convertiste en mi ilusión." 
+                                          </br>
+                                          </br> ESTE ES UN RECORDATORIO DE LO MUCHO QUE TE AMO Y PORSUPESTO SIEMPRE ESTARA AHI
+                                          </br>
+                                          </br> Te amo demasiado: mi polola, mi chikita, mi princesa, mi chula, mi kokoro, mi musa, mi wawi, mi colita, mi amorcito, mi tesoro, mi vida, mi osita, mi tesoro, mi chukuruku... mi pequeña chika♥.
+                                          </p>
+                                          <!-- <ion-icon name="heart"></ion-icon> -->
                                           
-                                          <div class="box_paragraph">
-                                              <h3 class="blog-tittle" id="reparet">CapFinal: <span>Confesión</span></h3>
-                                              <h2 class="blog-subtittle"><span>Sentimientos &</span> Finish</h2>       
-                                              <!-- <ion-icon name="heart"></ion-icon> -->
-                                              <p>"Te quiero desde que te conocí, desde que te metiste dentro de mi corazón, desde que te convertiste en mi ilusión." 
-                                              </br>
-                                              </br> ESTE ES UN RECORDATORIO DE LO MUCHO QUE TE AMO Y PORSUPESTO SIEMPRE ESTARA AHI
-                                              </br>
-                                              </br> Te amo demasiado: mi polola, mi chikita, mi princesa, mi chula, mi kokoro, mi musa, mi wawi, mi colita, mi amorcito, mi tesoro, mi vida, mi osita, mi tesoro, mi chukuruku... mi pequeña chika♥.
-                                              </p>
-                                              <!-- <ion-icon name="heart"></ion-icon> -->
-                                          </div>
                                       
                                           <div class="container_box_declaration-icon">
                                               <div class="box_declaration-icon">
