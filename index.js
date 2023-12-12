@@ -133,9 +133,10 @@ ButtonPresentacion.addEventListener("click", ()=> {
 })
 
 //  -------------------------------------------------------------------------------------
-const buttonBlog1 = document.getElementById("buttonBlog1")
-const buttonBlog2 = document.getElementById("buttonBlog2")
-const buttonBlog3 = document.getElementById("buttonBlog3")
+const buttonBlog1 = document.getElementById("buttonBlog1");
+const buttonBlog2 = document.getElementById("buttonBlog2");
+const buttonBlog3 = document.getElementById("buttonBlog3");
+const buttonBlog4 = document.getElementById("buttonBlog4");
 
 buttonBlog1.addEventListener("click", ()=>{
   if(body.children.blog2){
@@ -311,6 +312,61 @@ buttonBlog3.addEventListener("click", ()=>{
 
   }, 100)
 })
+buttonBlog4.addEventListener("click", ()=>{
+  
+  if(body.children.blog4){
+  }else{
+    const blog = document.createElement("section")
+    body.appendChild(blog)
+    blog.outerHTML = `<section class="container_blog" id="blog4">
+                          <div  class="blog">
+                              <figure class="blog-box_img" >
+                                  <img class="blog-img" src="./img/6d00015ad4dbe16cf96759a180221c3a.jpg" alt="">
+                              </figure>
+                              <h3 class="blog-tittle">Cap4: <span>Aniversario</span></h3>
+                              <h2 class="blog-subtittle"><span>Regalos &</span> Deseos</h2>
+
+
+                              <div class="blog-paragraph">
+                                <p>
+                                  Una de las cosas que mas amo son, los momentos en la que demostramos con acciones lo que sentimos mutuamente♥ :
+                                </p>
+                                <div class="cartilla1">
+                                  <p>
+                                    1º Aniversario 11/12/2023
+                                  </p>
+                                  <figure class="blog-box-ani_img" >
+                                    <img class="img-love img-love1" src="./TIAMU.png" alt="">
+                                    <img class="img-love img-love2" src="./Regalito1.jpeg" alt="">
+                                  </figure>
+                                </div>
+                              </div>
+                              <div class="blog-box_button">
+                                  <button class="blog-button" id="blog4ButtonReady">All ready</button>
+                              </div>
+                          </div>
+                      </section>>`
+  }
+  blog4 = document.getElementById("blog4")
+  setTimeout(()=>{
+    const blog4exe = document.getElementById("blog4") 
+    blog3ButtonReady = document.getElementById("blog4ButtonReady")
+
+    blog4exe.style.animationName = "translateOpen"
+    blog4exe.style.animationDuration = "2s"
+    blog4exe.style.animationTimingFunction = "ease-in-out"
+    blog4exe.style.transform = "translateY(0)"
+
+    blog3ButtonReady.addEventListener("click" , ()=> {
+      blog4exe.style.animationName = "translateClose"
+      blog4exe.style.animationDuration = "1s"
+      blog4exe.style.animationTimingFunction = "ease-in-out"
+      blog4exe.style.transform = "translateY(-120%)"
+      subidaBlog()
+    })
+
+  }, 100)
+})
 //  -------------------------------------------------------------------------------------
 let leidoBlog1 
 let leidoBlog2 
@@ -318,6 +374,7 @@ let leidoBlog3
 let blog1 
 let blog2 
 let blog3 
+let blog4
 let booleanButtonDeclaration = false
 
 function subidaBlog(){
