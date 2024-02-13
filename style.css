@@ -6,11 +6,28 @@
     box-sizing: border-box;
     font-family: 'Josefin Sans', sans-serif;
     -webkit-tap-highlight-color: rgba(0,0,0,0);
+    scrollbar-width: thin;
+    scrollbar-color: red;
 }
+      
+      
+    
+ *::-webkit-scrollbar {
+    width: 7px;
+}
+ *::-webkit-scrollbar-track {
+    background: transparent;
+}
+*::-webkit-scrollbar-thumb {
+    background-color: rgb(43, 42, 42);
+    border-radius: 20px;  
+}
+
 :root {
-    /* --clr1:#fc8662;  */
-    --clr1:#f34c4c;
-    --clr2:#ffffff;
+    --clr1:#d44f63;
+    --clr2:#e1e6e9;
+    --clr3: #e5c4d4;
+    --clr4: #7a3928;  
     --font-size-title-1: 1.8rem;
     --font-size-title-2: 2rem;
     --font-size-title-3: 2.2rem;
@@ -395,7 +412,8 @@ label .alegre::after {
     font-size: 0.85rem;/*1rem*/
     width:100% ;
     padding: 0 1rem 0 1rem;
-    overflow: scroll;
+    overflow: auto;
+    scrollbar-gutter: stable;
 
 }
 .blog-box_button {
@@ -753,7 +771,7 @@ label .alegre::after {
     font-weight: 600;
     cursor: pointer;
     letter-spacing: 2px;
-    color: white;
+    color: var(--clr2);
     -webkit-box-reflect: below 0px linear-gradient(transparent, #0002);
     background: transparent;
     transition: 0.75s;
@@ -811,7 +829,7 @@ label .alegre::after {
     width: 100%;
 }
 .section_tittle h2 {
-    color: white;
+    color: var(--clr2);
     font-size: 2.2rem;/*aqui*/
     letter-spacing: 2px;
 }
@@ -820,7 +838,7 @@ label .alegre::after {
     filter: drop-shadow(0 0 10px  var(--clr1)) drop-shadow(0 0 20px  var(--clr1));
 }
 .section_tittle h4 {
-    color: white;
+    color: var(--clr2);
     font-size: 1rem;
     letter-spacing: 2px;
     position: relative;
@@ -932,7 +950,7 @@ label .alegre::after {
 .section_box-container_declaration {
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: min-content 1fr auto auto auto ;
+    grid-template-rows: min-content auto auto 1fr auto ;
     grid-template-areas:
     "dFpr-t"
     "dFpr-tb"
@@ -1373,6 +1391,7 @@ label .alegre::after {
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    max-width: 650px;
 }
 .img-love {
     width: 100%;
